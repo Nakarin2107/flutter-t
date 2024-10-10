@@ -55,7 +55,7 @@ class MenuDrawer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Hello, User!',
+                'Hello, Student!',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -63,7 +63,7 @@ class MenuDrawer extends StatelessWidget {
                 ),
               ),
               Text(
-                'Welcome Back',
+                'ยินดีต้อนรับ',
                 style: TextStyle(
                   color: Colors.white70,
                   fontSize: 14,
@@ -171,7 +171,7 @@ class MenuDrawer extends StatelessWidget {
   Widget _buildLogoutButton(BuildContext context) {
     return ListTile(
       leading: Icon(Icons.logout, color: Colors.redAccent),
-      title: Text('Logout', style: TextStyle(fontWeight: FontWeight.bold)),
+      title: Text('ออกจากระบบ', style: TextStyle(fontWeight: FontWeight.bold)),
       onTap: () {
         Navigator.pushReplacement(
           context,

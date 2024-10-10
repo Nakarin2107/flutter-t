@@ -26,7 +26,7 @@ class LearningHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('เรียนไรดี?', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        title: Text('สื่อการเรียนรู้ออนไลน์', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.orangeAccent,
         elevation: 0,
         centerTitle: true,

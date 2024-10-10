@@ -69,7 +69,7 @@ class SimpleLoginPage extends StatelessWidget {
   Widget _buildWelcomeText() {
     return Center(
       child: Text(
-        'Welcome Back!',
+        'สื่อการเรียนรู้ออนไลน์',
         style: TextStyle(
           fontSize: 32,
           fontWeight: FontWeight.bold,
@@ -125,7 +125,7 @@ class SimpleLoginPage extends StatelessWidget {
             );
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('Invalid Username or Password')),
+              SnackBar(content: Text('ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง')),
             );
           }
         },
@@ -137,7 +137,7 @@ class SimpleLoginPage extends StatelessWidget {
           elevation: 5,
           backgroundColor: Colors.orangeAccent,
         ),
-        child: Text('Login', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        child: Text('เข้าสู่ระบบ', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
       ),
     );
   }
@@ -148,7 +148,7 @@ class SimpleLoginPage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Don't have an account? "),
+          Text("ยังไม่มีบัญชี? "),
           GestureDetector(
             onTap: () {
               // นำทางไปหน้า Sign Up เมื่อกดลิงก์
@@ -160,11 +160,11 @@ class SimpleLoginPage extends StatelessWidget {
               );
             },
             child: Text(
-              "Sign Up",
+              "สร้างบัญชี",
               style: TextStyle(
                 color: Colors.orangeAccent,
                 fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline,
+                // decoration: TextDecoration.underline,
               ),
             ),
           ),

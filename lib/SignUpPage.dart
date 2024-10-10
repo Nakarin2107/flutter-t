@@ -11,7 +11,7 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign Up'),
+        title: Text('สร้างบัญชี'),
         backgroundColor: Colors.orangeAccent,
       ),
       body: Padding(
@@ -22,7 +22,7 @@ class SignUpPage extends StatelessWidget {
             TextField(
               controller: usernameController,
               decoration: InputDecoration(
-                labelText: 'Username',
+                labelText: 'ชื่อผู้ใช้',
                 border: OutlineInputBorder(),
                 prefixIcon: Icon(Icons.person),
               ),
@@ -32,7 +32,7 @@ class SignUpPage extends StatelessWidget {
               controller: passwordController,
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Password',
+                labelText: 'รหัสผ่าน',
                 border: OutlineInputBorder(),
                 prefixIcon: Icon(Icons.lock),
               ),
@@ -42,7 +42,7 @@ class SignUpPage extends StatelessWidget {
               controller: confirmPasswordController,
               obscureText: true,
               decoration: InputDecoration(
-                labelText: 'Confirm Password',
+                labelText: 'ยืนยันรหัสผ่าน',
                 border: OutlineInputBorder(),
                 prefixIcon: Icon(Icons.lock_outline),
               ),
@@ -56,7 +56,7 @@ class SignUpPage extends StatelessWidget {
                   await prefs.setString('password', passwordController.text.trim());
 
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Account created successfully! Please log in.')),
+                    SnackBar(content: Text('สร้างบัญชีสำเร็จ')),
                   );
 
                   Navigator.pushReplacement(
@@ -65,11 +65,11 @@ class SignUpPage extends StatelessWidget {
                   );
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Passwords do not match')),
+                    SnackBar(content: Text('รหัสผ่านไม่ตรงกัน')),
                   );
                 }
               },
-              child: Text('Sign Up'),
+              child: Text('สร้างบัญชี'),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.orangeAccent),
             ),
           ],
