@@ -101,7 +101,6 @@ class LessonDetailPage extends StatelessWidget {
               ),
               SizedBox(height: 30),
 
-              // ปุ่ม Start Learning ที่ปรับแต่งให้ดูนุ่มนวลและทันสมัย
               Center(
                 child: ElevatedButton(
                   onPressed: () {

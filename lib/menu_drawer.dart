@@ -1,4 +1,3 @@
-import 'package:api/UserProfilePage.dart';
 import 'package:api/login.dart';
 import 'package:flutter/material.dart';
 import 'clip_detail.dart';
@@ -22,7 +21,6 @@ class MenuDrawer extends StatelessWidget {
             _buildEnglishLessonTile(context), // สื่อการสอนภาษาอังกฤษ
             _buildBusinessLessonTile(context), // เทคนิคการทำธุรกิจ
             Divider(color: Colors.orange.shade300),
-            _buildUserProfileTile(context), // เมนู User Profile & Settings
             _buildLogoutButton(context), // ปุ่ม Logout
           ],
         ),
@@ -45,7 +43,7 @@ class MenuDrawer extends StatelessWidget {
         children: [
           ClipOval(
             child: Image.network(
-              'https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/cbc1/live/74fe8e20-5170-11ed-ac87-630245663c6a.png.webp',
+              'images/fs.png',
               width: 60,
               height: 60,
               fit: BoxFit.cover,
@@ -184,20 +182,6 @@ class MenuDrawer extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
       ),
-    );
-  }
-
-  // ฟังก์ชันสร้างเมนู User Profile & Settings
-  Widget _buildUserProfileTile(BuildContext context) {
-    return ListTile(
-      leading: Icon(Icons.person, color: Colors.deepOrange),
-      title: Text('User Profile & Settings'),
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => UserProfilePage()),
-        );
-      },
     );
   }
 }
